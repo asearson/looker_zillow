@@ -16,7 +16,7 @@ view: single_family_residence {
     sql: ${TABLE}.DateMonth ;;
   }
 
-  dimension: date_month_data {
+  dimension: monthly_mortgage {
     type: number
     sql: ${TABLE}.DateMonthData ;;
   }
