@@ -26,9 +26,14 @@ view: single_family_residence_rental {
     sql: ${TABLE}.Metro ;;
   }
 
+  dimension: id {
+    type: string
+    primary_key: yes
+    sql: CONCAT(CAST(${TABLE}.RegionID AS STRING), CAST(${TABLE}.DateMonthData AS STRING)) ;;
+    }
+
   dimension: region_id {
     type: number
-    primary_key: yes
     sql: ${TABLE}.RegionID ;;
   }
 
