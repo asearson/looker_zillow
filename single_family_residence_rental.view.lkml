@@ -57,11 +57,6 @@ view: single_family_residence_rental {
     sql: ${TABLE}.State ;;
   }
 
-  measure: rental_income_per_month_sum {
-    type: sum
-    sql: ${TABLE}.DateMonthData ;;
-  }
-
   measure: average_rental_price {
     type: average
     sql: ${rental_price} ;;
