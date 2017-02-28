@@ -10,6 +10,6 @@ explore: single_family_residence {
   join: single_family_residence_rental {
     type: left_outer
     relationship: one_to_one
-    sql_on: ${single_family_residence.region_id} = ${single_family_residence_rental.region_id} ;;
+    sql_on: ${single_family_residence.id} = ${single_family_residence_rental.id};;
   }
 }
