@@ -59,7 +59,7 @@ view: single_family_residence {
 
   dimension: rental_price_vs_home_price {
     type: number
-    sql: ${home_price}/${single_family_residence_rental.rental_price} ;;
+    sql: ${single_family_residence_rental.rental_price}/${home_price} ;;
   }
 
   measure: average_home_price {
