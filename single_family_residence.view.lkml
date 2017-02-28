@@ -43,7 +43,7 @@ view: single_family_residence {
   }
 
   dimension: region_name {
-    type: number
+    type: zipcode
     sql: ${TABLE}.RegionName ;;
   }
 
