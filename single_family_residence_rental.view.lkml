@@ -16,6 +16,11 @@ view: single_family_residence_rental {
     sql: ${TABLE}.DateMonth ;;
   }
 
+  dimension: year {
+    type: number
+    sql: substr(${date_month},1,4) ;;
+  }
+
   dimension: rental_income_per_month {
     type: number
     sql: ${TABLE}.DateMonthData ;;
@@ -30,7 +35,7 @@ view: single_family_residence_rental {
     type: string
     primary_key: yes
     sql: CONCAT(CAST(${TABLE}.RegionID AS STRING), CAST(${TABLE}.DateMonthData AS STRING)) ;;
-    }
+  }
 
   dimension: region_id {
     type: number
