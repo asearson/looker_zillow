@@ -17,7 +17,7 @@ view: single_family_residence {
   }
 
   dimension: year {
-    type: number
+    type: string
     sql: substr(${date_month},1,4) ;;
   }
 
