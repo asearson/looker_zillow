@@ -57,9 +57,19 @@ view: single_family_residence {
     sql: ${TABLE}.State ;;
   }
 
+  dimension: rental_price_vs_home_price {
+    type: number
+    sql: ${home_price}/${single_family_residence_rental.rental_price} ;;
+  }
+
   measure: average_home_price {
     type: average
     sql: ${home_price} ;;
+  }
+
+  measure: average_rental_price_vs_home_price {
+    type: average
+    sql: ${rental_price_vs_home_price} ;;
   }
 
   measure: count {
