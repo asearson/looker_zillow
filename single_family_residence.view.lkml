@@ -21,7 +21,7 @@ view: single_family_residence {
     sql: substr(${date_month},1,4) ;;
   }
 
-  dimension: monthly_mortgage {
+  dimension: home_price {
     type: number
     sql: ${TABLE}.DateMonthData ;;
   }
@@ -55,6 +55,11 @@ view: single_family_residence {
   dimension: state {
     type: string
     sql: ${TABLE}.State ;;
+  }
+
+  measure: average_home_price {
+    type: average
+    sql: ${home_price} ;;
   }
 
   measure: count {

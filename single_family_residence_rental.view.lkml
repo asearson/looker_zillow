@@ -21,7 +21,7 @@ view: single_family_residence_rental {
     sql: substr(${date_month},1,4) ;;
   }
 
-  dimension: rental_income_per_month {
+  dimension: rental_price {
     type: number
     sql: ${TABLE}.DateMonthData ;;
   }
@@ -60,6 +60,11 @@ view: single_family_residence_rental {
   measure: rental_income_per_month_sum {
     type: sum
     sql: ${TABLE}.DateMonthData ;;
+  }
+
+  measure: average_rental_price {
+    type: average
+    sql: ${rental_price} ;;
   }
 
   measure: count {
